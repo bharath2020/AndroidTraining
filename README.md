@@ -6,7 +6,7 @@ Hosts all materials that are used in Android beginners training.
 
 * Install Android Studio
   * On a Mac - https://developer.android.com/studio/install.html
-  * On a PC / Windows -
+  * On a PC / Windows - https://developer.android.com/studio/install.html
 
 # Know your IDE - Android Studio
 * Tinker with Android Studio - https://developer.android.com/studio/intro/index.html
