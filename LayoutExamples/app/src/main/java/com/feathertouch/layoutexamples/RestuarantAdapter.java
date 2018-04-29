@@ -51,6 +51,10 @@ public class RestuarantAdapter extends RecyclerView.Adapter<RestuarantAdapter.Re
         }
     }
 
+    public void newRestuarantsFound(ArrayList<Restaurant> restaurants) {
+        this.restaurants = restaurants;
+        notifyDataSetChanged();
+    }
 
 }
 
