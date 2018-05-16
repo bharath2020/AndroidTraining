@@ -3,6 +3,8 @@
     package="com.feathertouch.layoutexamples">
 
     <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+
 
     <application
         android:allowBackup="true"
@@ -12,13 +14,22 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".MainActivity"
+            android:name=".controller.MainActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
 
         </activity>
         <activity
-            android:name=".ListviewActivity"
+            android:name=".controller.RestuarantListviewActivity"
+            android:label="@string/title_activity_listview"
+            android:theme="@style/AppTheme.NoActionBar">
+
+
+
+        </activity>
+
+        <activity
+            android:name=".controller.WeatherInfoActivity"
             android:label="@string/title_activity_listview"
             android:theme="@style/AppTheme.NoActionBar">
 

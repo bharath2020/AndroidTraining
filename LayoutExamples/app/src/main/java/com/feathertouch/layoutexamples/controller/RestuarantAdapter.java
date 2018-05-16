@@ -1,4 +1,4 @@
-package com.feathertouch.layoutexamples;
+package com.feathertouch.layoutexamples.controller;
 
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
@@ -7,7 +7,8 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.feathertouch.layoutexamples.model.Restaurant;
+import com.feathertouch.layoutexamples.R;
+import com.feathertouch.layoutexamples.model.restuarant.Restaurant;
 
 import java.util.ArrayList;
 
@@ -23,7 +24,7 @@ public class RestuarantAdapter extends RecyclerView.Adapter<RestuarantAdapter.Re
     @NonNull
     @Override
     public RestaurantViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        LinearLayout layout = (LinearLayout) LayoutInflater.from(parent.getContext()).inflate(R.layout.restaurant_row_item, parent, false);
+        LinearLayout layout = (LinearLayout) LayoutInflater.from(parent.getContext()).inflate(R.layout.list_row_item, parent, false);
         return  new RestaurantViewHolder(layout);
     }
 
@@ -46,7 +47,7 @@ public class RestuarantAdapter extends RecyclerView.Adapter<RestuarantAdapter.Re
             super(t);
             this.viewGroup = t;
             titleView = t.findViewById(R.id.titleView);
-            reviewLabel = t.findViewById(R.id.reviewLabel);
+            reviewLabel = t.findViewById(R.id.subTitle);
 
         }
     }

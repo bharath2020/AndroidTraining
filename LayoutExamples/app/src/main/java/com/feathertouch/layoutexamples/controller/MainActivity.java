@@ -1,10 +1,14 @@
-package com.feathertouch.layoutexamples;
+package com.feathertouch.layoutexamples.controller;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.EditText;
+
+import com.feathertouch.layoutexamples.R;
+import com.feathertouch.layoutexamples.services.LocationDetector;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -13,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        LocationDetector.INSTANCE.setContext(this);
 
         EditText titleInputField = (EditText)findViewById(R.id.titleInputField);
 
@@ -21,6 +25,16 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+
+    }
+
+    private void buttonClick() {
+        String message = "Nandini restuarant";
+        Intent selectedRestuarant = new Intent();
+        selectedRestuarant.putExtra("res_name", message);
+
+        RestuarantListviewActivity listView = new RestuarantListviewActivity();
+        listView.startActivity(selectedRestuarant);
 
     }
 

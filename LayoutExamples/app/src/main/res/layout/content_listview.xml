@@ -5,25 +5,31 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context=".ListviewActivity"
+    tools:context=".controller.RestuarantListviewActivity"
     tools:showIn="@layout/activity_listview">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:orientation="vertical"
         android:id="@+id/buttonLayout">
         <android.support.v7.widget.AppCompatButton
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:id="@+id/downloadButton"
             android:text="Download Restuarants"
-            android:layout_above="@+id/restaurantListView"
+            />
+        <android.support.v7.widget.AppCompatButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/updateLocation"
+            android:text="Update Location"
             />
 
     </LinearLayout>
 
     <android.support.v7.widget.RecyclerView
-        android:id="@+id/restaurantListView"
+        android:id="@+id/ListView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/buttonLayout"

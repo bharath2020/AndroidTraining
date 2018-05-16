@@ -1,6 +1,4 @@
-package com.feathertouch.layoutexamples;
-
-import com.feathertouch.layoutexamples.model.Restaurant;
+package com.feathertouch.layoutexamples.model.restuarant;
 
 import java.util.ArrayList;
 

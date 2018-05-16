@@ -1,10 +1,9 @@
-package com.feathertouch.layoutexamples.network;
+package com.feathertouch.layoutexamples.model.restuarant;
 
 import android.os.AsyncTask;
 import android.util.Log;
 
-import com.feathertouch.layoutexamples.RestuarantDownloadCallback;
-import com.feathertouch.layoutexamples.model.Restaurant;
+import com.feathertouch.layoutexamples.network.JSONDataDownloader;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -25,11 +24,14 @@ public class RestuarantsListDownloadTask extends AsyncTask<JSONDataDownloader,Vo
     protected ArrayList<Restaurant> doInBackground(JSONDataDownloader... downloaders) {
 
         JSONDataDownloader downloader = downloaders[0];
-        ArrayList<Restaurant> restaurants = null;
+        ArrayList<Restaurant> restaurants = new ArrayList<>();
         try {
             String responseData = downloader.download();
-            restaurants = getRestuarants(responseData);
-            Log.d(TAG, responseData);
+            if ( responseData != null ) {
+                restaurants = getRestuarants(responseData);
+            } else {
+                Log.e(TAG, "No data found");
+            }
 
         } catch (Exception e) {
              Log.d(TAG, e.toString());
